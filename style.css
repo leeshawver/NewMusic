@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(145deg, #1c1c2e, #2a2a3d);
+  color: #eaeaea;
+  font-family: 'Space Grotesk', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #7f5af0;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 5px rgba(127, 90, 240, 0.4);
+}
+
+h2, h3 {
+  color: #2cb67d;
+}
+
+main#story, #reveal {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  max-width: 700px;
+  width: 100%;
+  animation: fadeIn 1s ease-in;
+  margin-top: 1rem;
+}
+
+#story-container p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+button {
+  background: transparent;
+  color: #eaeaea;
+  border: 2px solid #7f5af0;
+  border-radius: 30px;
+  padding: 0.6rem 1.4rem;
+  margin: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #7f5af0;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #7f5af0;
+}
+
+#album-art {
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(127, 90, 240, 0.6);
+}
+
+a#album-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #2cb67d;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a#album-link:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #1c1c2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+  animation: fadeIn 2s ease-in;
+}
+
+#intro h1 {
+  font-size: 3.5rem;
+  color: #7f5af0;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#intro p {
+  font-size: 1.2rem;
+  color: #eaeaea;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#intro button {
+  font-size: 1.1rem;
+  padding: 0.7rem 1.5rem;
+  border: 2px solid #2cb67d;
+  background-color: transparent;
+  color: #2cb67d;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#intro button:hover {
+  background-color: #2cb67d;
+  color: #1c1c2e;
+  box-shadow: 0 0 10px #2cb67d;
+}
+
+canvas#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}

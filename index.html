@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Music for Alma</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="intro">
+    <h1>New Music for Alma</h1>
+    <p>Every story reveals a sound.</p>
+    <button onclick="startExperience()">Enter</button>
+  </div>
+
+  <canvas id="particles-js"></canvas>
+
+  <main id="story" style="display: none;">
+    <h1>New Music for Alma</h1>
+    <div id="story-container"></div>
+  </main>
+
+  <div id="reveal" style="display: none">
+    <h2>Your Album</h2>
+    <img id="album-art" src="" alt="Album Cover" style="max-width: 300px;" />
+    <h3 id="album-title"></h3>
+    <p id="album-artist" style="font-style: italic;"></p>
+    <p id="album-description"></p>
+    <a id="album-link" href="#" target="_blank">Listen on YouTube Music</a>
+  </div>
+
+  <script src="js/particles.min.js"></script>
+  <script src="js/story-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
