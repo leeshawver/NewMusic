@@ -11,17 +11,6 @@ const stories = [
     ]
   },
   {
-    id: 2,
-    steps: [
-      { prompt: "A market floats above clouds. No one speaks.", options: [{ text: "Browse the stalls", next: 1 }, { text: "Whistle into the air", next: 2 }] },
-      { prompt: "A merchant offers you headphones made of wind.", options: [{ text: "Put them on", next: 3 }, { text: "Ask the price", next: 4 }] },
-      { prompt: "A bird mimics your tune, but better.", options: [{ text: "Sing louder", next: 3 }, { text: "Clap in defeat", next: 4 }] },
-      { prompt: "The headphones whisper embarrassing memories.", options: [{ text: "Laugh it off", next: 5 }, { text: "Blush silently", next: 5 }] },
-      { prompt: "You find a staircase made of bass drops.", options: [{ text: "Dance down", next: 5 }, { text: "Slide with flair", next: 5 }] },
-      { prompt: "A shimmering stand plays your heartbeat.", options: [{ text: "Approach it", reveal: 2 }, { text: "Sit and listen", reveal: 2 }] }
-    ]
-  },
-  {
     id: 3,
     steps: [
       { prompt: "A subway map flickers in neon. The lines shift.", options: [{ text: "Take the red line", next: 1 }, { text: "Take the green line", next: 2 }] },
@@ -119,14 +108,6 @@ const albums = [
     description: "Chill. Recommended to me by my collaborating music buddy in CA, so maybe the upcoming album may have vibes like this one…",
     link: "https://music.youtube.com/playlist?list=OLAK5uy_m7tw7gdPanqzzjHNFQiGdtBtZ4PRyePhI&si=1465cMweO7b1HEv3",
     image: "cover-art/free love.jpg"
-  },
-  {
-    id: 2,
-    title: "Diamond Hoo Ha",
-    artist: "Supergrass",
-    description: "Turn of the century brit rock. An overlooked band, IMO. I’ve loved every album they’re released and wish there was more Supergrass in the world.",
-    link: "https://music.youtube.com/playlist?list=OLAK5uy_m4bvMEx3gxSj5gYRx6HzlnljStUwI6Zpg&si=kdI9xq1fKim_atqZ",
-    image: "cover-art/diamond hoo ha.jpg"
   },
   {
     id: 3,
