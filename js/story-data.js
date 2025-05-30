@@ -55,17 +55,6 @@ const stories = [
     ]
   },
   {
-    id: 7,
-    steps: [
-      { prompt: "An attic glows with floating records.", options: [{ text: "Organize by scent", next: 1 }, { text: "Stack them randomly", next: 2 }] },
-      { prompt: "One record vibrates uncontrollably.", options: [{ text: "Place it on a turntable", next: 3 }, { text: "Dance with it", next: 4 }] },
-      { prompt: "A phonograph wheezes a lullaby.", options: [{ text: "Nap nearby", next: 4 }, { text: "Sing backup", next: 3 }] },
-      { prompt: "You’re handed a gold-plated kazoo.", options: [{ text: "Play 'Bohemian Rhapsody'", next: 5 }, { text: "Toss it into a vent", next: 5 }] },
-      { prompt: "The floor becomes a stage.", options: [{ text: "Take a bow", next: 5 }, { text: "Break into monologue", next: 5 }] },
-      { prompt: "A microphone hovers. Your voice is perfect.", options: [{ text: "Speak your truth", reveal: 7 }, { text: "Whistle a secret", reveal: 7 }] }
-    ]
-  },
-  {
     id: 8,
     steps: [
       { prompt: "Endless doors echo your footsteps.", options: [{ text: "Open door 404", next: 1 }, { text: "Kick door 900", next: 2 }] },
@@ -140,14 +129,6 @@ const albums = [
     description: "I have no idea where I found this album. To me, it’s raw, tender, and moving. I have a feeling the artist has kinda faded into obscurity because I couldn’t find much else of his/theirs that I found compelling. Enjoy!",
     link: "https://music.youtube.com/playlist?list=OLAK5uy_nfHLY8s3REJV85uMkhbUuR-Qmb3T_iDfo&si=SFbvfmP9HeBJMpTF",
     image: "cover-art/muchacho.jpg"
-  },
-  {
-    id: 7,
-    title: "In the Mountain in the Cloud",
-    artist: "Portugal. The Man",
-    description: "Recommended by my buddy Curtis in CA, whose musical taste I probably hold a little too high. He also introduced me to The Barr Bros. and Father John Misty. They seem to have taken a trajectory similar to Modest Mouse – rather indie and underground to “mainstream-curious”. Enjoy!",
-    link: "https://music.youtube.com/playlist?list=OLAK5uy_nG5mXdNSel8ni8aEFgKF94CamjDVPlrAA&si=y1Z1V6Wo_gZCbcsT",
-    image: "cover-art/in the mountain.jpg"
   },
   {
     id: 8,
