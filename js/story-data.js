@@ -94,7 +94,7 @@ const albums = [
     id: 1,
     title: "Free Love",
     artist: "Sylvan Esso",
-    description: "Chill. Recommended to me by my collaborating music buddy in CA, so maybe the upcoming album may have vibes like this one…",
+    description: "Chill and innovative. Rather new to me. It's an album I know I will be revisiting because there are layers and folds awaiting my exploration. Recommended to me by my collaborative music buddy in CA, so maybe the upcoming album may have vibes like this one…",
     link: "https://music.youtube.com/playlist?list=OLAK5uy_m7tw7gdPanqzzjHNFQiGdtBtZ4PRyePhI&si=1465cMweO7b1HEv3",
     image: "cover-art/free love.jpg"
   },
@@ -102,7 +102,7 @@ const albums = [
     id: 3,
     title: "The Devil and God are Raging Inside Me",
     artist: "Brand New",
-    description: "I was hanging with a guy around 2005 who was way into emo. He introduced me to these guys and I really like their energy and melodic content. It may be tough to listen to if the whiny emo vibe rubs you the wrong way.",
+    description: "I was hanging with a guy around 2005 who was way into emo. He introduced me to these guys and I really like their energy and melodic content. It may be tough to listen to if the whiny emo vibe rubs you the wrong way. Or I have swung and missed again (American baseball reference) and you are totally familiar with Brand New.",
     link: "https://music.youtube.com/playlist?list=OLAK5uy_kPMtWyLinzZqOAn6Q4rVuY4SPoosLKxTU&si=K8tUj5-25UNMleIp",
     image: "cover-art/the devil and god are raging inside me.jpg"
   },
@@ -110,7 +110,7 @@ const albums = [
     id: 4,
     title: "The Moon & Antarctica",
     artist: "Modest Mouse",
-    description: "Classic indie. I saw these guys twice in Chico, CA. Isaac Brock is one of my favorite songwriters.",
+    description: "Classic indie. I saw these guys twice in Chico, CA. Isaac Brock is one of my favorite songwriters. This album is probably in my top 20.",
     link: "https://music.youtube.com/playlist?list=OLAK5uy_k_w23C0sr-080Tbds3R647JjL4e3WwE8g&si=NVCeAK7TvLBhhIRQ",
     image: "cover-art/the mood and antarctica.jpg"
   },
@@ -142,7 +142,7 @@ const albums = [
     id: 9,
     title: "Prelude to Ecstasy",
     artist: "The Last Dinner Party",
-    description: "Straight up female power rock. The drummer is awesome – a temporary member of the band for this album, so I hear. They got into a bit of hot water for screening men at the door to their concerts and being a bit overtly sexist. Killer album! Enjoy!",
+    description: "Straight up female power rock. The drummer is next level – a temporary member of the band for this album, so I hear. They got into a bit of hot water recently for screening men at the door to their concerts and being a bit overtly sexist. Killer album! Enjoy!",
     link: "https://music.youtube.com/playlist?list=OLAK5uy_nQOlc3Mb-_m3Ttx8j6Ypx-4uzNeiNUDWs&si=1VnLIx-QaNLxM_4s",
     image: "cover-art/prelude.jpg"
   },
