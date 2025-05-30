@@ -1,187 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Message for Alma</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <style>
-        
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f8f4ff;
-            font-family: 'Share Tech', sans-serif;
-            overflow: hidden;
-        }
-        
-        .container {
-            text-align: center;
-            padding: 40px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 6px 20px rgba(116, 79, 168, 0.2);
-            max-width: 600px;
-            width: 90%;
-        }
-        
-        .message {
-            font-family: 'Share Tech', sans-serif;
-            font-size: 2.8rem;
-            color: #333;
-            margin: 0 auto;
-            overflow: hidden;
-            border-right: 0.15em solid #744fa8;
-            white-space: normal;
-            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
-            letter-spacing: 1px;
-        }
-        
-        .emoji {
-            display: inline-block;
-            animation: bounce 1s ease infinite;
-            margin-left: 8px;
-        }
-        
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        
-        @keyframes blink-caret {
-            from, to { border-right-color: transparent }
-            50% { border-right-color: #744fa8 }
-        }
-        
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        
-        .notes {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-        
-        .music-note {
-            position: absolute;
-            color: rgba(116, 79, 168, 0.5);
-            font-size: 24px;
-            opacity: 0;
-            animation: float 5s ease-in infinite;
-        }
-        
-        @keyframes float {
-            0% {
-                opacity: 0;
-                transform: translateY(0) rotate(0deg);
-            }
-            20% {
-                opacity: 0.8;
-            }
-            80% {
-                opacity: 0.8;
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-800%) rotate(360deg);
-            }
-        }
-        
-        /* Adjust typing animation to work with wrapped text */
-        @media (max-width: 600px) {
-            .message {
-                font-size: 2rem;
-                border-right: none;
-                opacity: 0;
-                animation: fade-in 2s forwards;
-                letter-spacing: 1px;
-            }
-            
-            @keyframes fade-in {
-                from { opacity: 0; }
-                to { opacity: 1; }
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Music for Alma</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="notes" id="notes"></div>
-    <div class="container">
-        <div class="message">
-            Alma, no looking ahead. Be patient <span class="emoji">😊</span>
-        </div>
-    </div>
+  <div id="intro">
+    <h1>New Music for Alma</h1>
+    <p>Every story reveals a sound; rather a cocophane of sounds. Hopefully sounds that tickle, sounds that tease, and sounds that taunt.</p>
+    <button onclick="startExperience()">Enter</button>
+  </div>
 
-    <script>
-        // Music note characters
-        const noteChars = ['♩', '♪', '♫', '♬', '𝄞', '𝅘𝅥', '𝅘𝅥𝅮', '𝅘𝅥𝅯'];
-        
-        // Create floating music notes in the background
-        const notesContainer = document.getElementById('notes');
-        
-        function createMusicNote() {
-            const note = document.createElement('div');
-            note.classList.add('music-note');
-            
-            // Random note character
-            note.textContent = noteChars[Math.floor(Math.random() * noteChars.length)];
-            
-            // Random position
-            note.style.left = Math.random() * 100 + '%';
-            note.style.top = Math.random() * 100 + '%';
-            
-            // Random size
-            const size = Math.random() * 16 + 14;
-            note.style.fontSize = size + 'px';
-            
-            // Random animation duration
-            note.style.animationDuration = Math.random() * 3 + 4 + 's';
-            
-            notesContainer.appendChild(note);
-            
-            // Remove after animation
-            setTimeout(() => {
-                note.remove();
-            }, 8000);
-        }
-        
-        // Create notes periodically
-        setInterval(createMusicNote, 300);
-        
-        // Create initial notes
-        for (let i = 0; i < 15; i++) {
-            setTimeout(createMusicNote, i * 200);
-        }
-        
-        // Fix typing animation for wrapped text
-        const message = document.querySelector('.message');
-        const computedStyle = window.getComputedStyle(message);
-        const width = computedStyle.width;
-        
-        // If we're on a small screen, use fade-in instead of typing
-        if (window.innerWidth <= 600) {
-            message.style.animation = 'fade-in 2s forwards';
-        } else {
-            // On larger screens, make sure text wraps properly
-            message.style.whiteSpace = 'normal';
-        }
-    </script>
+  <canvas id="particles-js"></canvas>
+
+  <main id="story" style="display: none;">
+    <h1>New Music for Alma</h1>
+    <div id="story-container"></div>
+  </main>
+
+  <div id="reveal" style="display: none">
+    <h2>You've chosen......</h2>
+    <img id="album-art" src="" alt="Album Cover" style="max-width: 300px;" />
+    <h3 id="album-title"></h3>
+    <p id="album-artist" style="font-style: italic;"></p>
+    <p id="album-description"></p>
+    <a id="album-link" href="#" target="_blank">Listen on YouTube Music</a>
+  </div>
+
+  <script src="js/particles.min.js"></script>
+  <script src="js/story-data.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
